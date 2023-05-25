@@ -55,7 +55,7 @@ namespace InternalMessagingSystem.Models
         /// The ID of the receiver.
         /// </summary>
         [Required]
-        public Guid ReceiverId { get; set; }
+        public Guid? ReceiverId { get; set; }
 
 
         /// <summary>

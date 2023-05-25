@@ -1,0 +1,11 @@
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/InternalMessagingSystem
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/appsettings.Development.json
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/appsettings.json
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/InternalMessagingSystem.dll
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/InternalMessagingSystem.deps.json
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/InternalMessagingSystem.runtimeconfig.json
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/InternalMessagingSystem.pdb
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/Microsoft.OpenApi.dll
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll

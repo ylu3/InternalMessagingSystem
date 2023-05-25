@@ -32,14 +32,14 @@ namespace InternalMessagingSystem.Services
         {
             // Ensure the user exists
             await _userService.GetUserAsync(userId);
-            await _userService.GetUserAsync(messageDTO.ReceiverId);
+            await _userService.GetUserAsync(messageDTO.ReceiverId!.Value);
 
             // Create a new message
             var message = new Message
             {
                 Id = Guid.NewGuid(),
                 SenderId = userId,
-                ReceiverId = messageDTO.ReceiverId,
+                ReceiverId = messageDTO.ReceiverId!.Value,
                 Time = DateTime.UtcNow,
                 Content = messageDTO.Content,
                 IsDeletedBySender = false,

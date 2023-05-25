@@ -4,28 +4,14 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="InternalMessagingSystem/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="InternalMessagingSystem/Services/MessageService.cs">
     <Files>
-      <File FileName="InternalMessagingSystem/Program.cs" Line="24" Column="1" />
+      <File FileName="InternalMessagingSystem/Models/Message.cs" Line="58" Column="21" />
+      <File FileName="InternalMessagingSystem/Services/MessageService.cs" Line="37" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="TestKeakr" expanded="True">
-            <Node name="InternalMessagingSystem" expanded="True" selected="True">
-              <Node name="Configuration" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-              <Node name="Filters" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True" />
-            </Node>
-            <Node name="InternalMessagingSystem.Tests" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Services" expanded="True" />
-            </Node>
-          </Node>
-        </State>
+        <State name="__root__" />
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
