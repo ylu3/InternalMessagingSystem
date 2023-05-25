@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem.Tests/InternalMessagingSystem.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem.Tests/InternalMessagingSystem.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem.Tests/InternalMessagingSystem.Tests.csproj",
+        "projectName": "InternalMessagingSystem.Tests",
+        "projectPath": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem.Tests/InternalMessagingSystem.Tests.csproj",
+        "packagesPath": "/Users/luy/.nuget/packages/",
+        "outputPath": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/luy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/Users/luy/OneDrive/Documents/PFE/TxBI/NuGet": {},
+          "/Users/luy/OneDrive/Documents/PFE/TxBI/repo": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/InternalMessagingSystem.csproj": {
+                "projectPath": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/InternalMessagingSystem.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/InternalMessagingSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/InternalMessagingSystem.csproj",
+        "projectName": "InternalMessagingSystem",
+        "projectPath": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/InternalMessagingSystem.csproj",
+        "packagesPath": "/Users/luy/.nuget/packages/",
+        "outputPath": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/luy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/Users/luy/OneDrive/Documents/PFE/TxBI/NuGet": {},
+          "/Users/luy/OneDrive/Documents/PFE/TxBI/repo": {},
+          "/usr/local/share/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

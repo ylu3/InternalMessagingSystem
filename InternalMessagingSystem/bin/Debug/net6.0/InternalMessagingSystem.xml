@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InternalMessagingSystem</name>
+    </assembly>
+    <members>
+        <member name="T:InternalMessagingSystem.Configuration.ServiceCollectionExtensions">
+            <summary>
+            Extension methods for configuring internal messaging system services.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Configuration.ServiceCollectionExtensions.AddInternalMessagingSystem(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds internal messaging system services to the specified <paramref name="services"/>.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the services to.</param>
+            <returns>The updated <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</returns>
+        </member>
+        <member name="T:InternalMessagingSystem.Controllers.HomeController">
+            <summary>
+            Home controller for handling errors in the internal messaging system.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.HomeController.HandleError">
+            <summary>
+            Action method to handle errors and return a problem response.
+            </summary>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> representing the problem response.</returns>
+        </member>
+        <member name="T:InternalMessagingSystem.Controllers.MessagesController">
+            <summary>
+            Controller for managing messages in the internal messaging system.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.MessagesController.#ctor(InternalMessagingSystem.Services.IMessageService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Controllers.MessagesController"/> class.
+            </summary>
+            <param name="messageService">The message service used for message operations.</param>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.MessagesController.SendMessageAsync(System.Guid,InternalMessagingSystem.Models.CreateMessageDTO)">
+            <summary>
+            Sends a message.
+            </summary>
+            <param name="messageDTO">The messageDTO to send.</param>
+            <param name="userId">The id of the sender.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> representing the result of the operation.</returns>
+            <response code="201">Success</response>
+            <response code="404">User not found</response>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.MessagesController.GetUserMessagesAsync(System.Guid)">
+            <summary>
+            Gets all messages for a specific user.
+            </summary>
+            <param name="userId">The Id of the user to get.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> containing a list of messages.</returns>
+            <response code="200">Success</response>
+            <response code="404">Messages not found</response>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.MessagesController.GetUserMessageAsync(System.Guid,System.Guid)">
+            <summary>
+            Get a message for a specific user.
+            </summary>
+            <param name="userId">The Id of the user to get.</param>
+            <param name="messageId">The Id of the message to get.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> containing a list of messages.</returns>
+            <response code="200">Success</response>
+            <response code="404">Messages not found</response>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.MessagesController.DeleteUserMessagesAsync(System.Guid)">
+            <summary>
+            Deletes all messages for a specific user.
+            </summary>
+            <param name="userId">The Id of the user.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> representing the result of the operation.</returns>
+            <response code="204">Success</response>
+            <response code="404">Messages not found</response>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.MessagesController.DeleteUserMessageAsync(System.Guid,System.Guid)">
+            <summary>
+            Deletes a message for a specific user.
+            </summary>
+            <param name="userId">The Id of the user.</param>
+            <param name="messageId">The Id of the message to get.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> representing the result of the operation.</returns>
+            <response code="204">Success</response>
+            <response code="404">Messages not found</response>
+        </member>
+        <member name="T:InternalMessagingSystem.Controllers.UsersController">
+            <summary>
+            Controller for managing users in the internal messaging system.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.UsersController.#ctor(InternalMessagingSystem.Services.IUserService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Controllers.UsersController"/> class.
+            </summary>
+            <param name="userService">The user service used for user operations.</param>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.UsersController.AddUserAsync(System.String)">
+            <summary>
+            Adds a new user.
+            </summary>
+            <param name="userName">The username of the user to add.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> representing the result of the operation.</returns>
+            <response code="201">Success</response>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.UsersController.GetUsersAsync">
+            <summary>
+            Gets all users.
+            </summary>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> containing a list of users.</returns>
+            <response code="200">Success</response>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.UsersController.GetUserAsync(System.Guid)">
+            <summary>
+            Get a user.
+            </summary>
+            <param name="userId">The Id of the user to get.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> containing a list of users.</returns>
+            <response code="200">Success</response>
+            <response code="404">User Not Found</response>
+        </member>
+        <member name="M:InternalMessagingSystem.Controllers.UsersController.DeleteUserAsync(System.Guid)">
+            <summary>
+            Deletes a user.
+            </summary>
+            <param name="userId">The Id of the user to delete.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> representing the result of the operation.</returns>
+            <response code="204">Success</response>
+            <response code="404">User Not Found</response>
+        </member>
+        <member name="T:InternalMessagingSystem.Exceptions.MessageNotFoundException">
+            <summary>
+            The exception that is thrown when a message is not found.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Exceptions.MessageNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Exceptions.MessageNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Exceptions.MessageNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Exceptions.MessageNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:InternalMessagingSystem.Exceptions.MessageNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Exceptions.MessageNotFoundException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:InternalMessagingSystem.Exceptions.UserNotFoundException">
+            <summary>
+            The exception that is thrown when a user is not found.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Exceptions.UserNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Exceptions.UserNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Exceptions.UserNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Exceptions.UserNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:InternalMessagingSystem.Exceptions.UserNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Exceptions.UserNotFoundException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:InternalMessagingSystem.Filters.ApiExceptionFilter">
+            <summary>
+            Exception filter for handling API exceptions and returning appropriate JSON responses.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Filters.ApiExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            Handles the exception asynchronously and returns an appropriate JSON response.
+            </summary>
+            <param name="context">The exception context.</param>
+        </member>
+        <member name="T:InternalMessagingSystem.Models.Message">
+            <summary>
+            Represents a message in the internal messaging system.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.Message.Id">
+            <summary>
+            The unique identifier for the message.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.Message.SenderId">
+            <summary>
+            The ID of the sender.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.Message.ReceiverId">
+            <summary>
+            The ID of the receiver.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.Message.Time">
+            <summary>
+            The timestamp when the message was sent.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.Message.Content">
+            <summary>
+            The content of the message.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.Message.IsDeletedBySender">
+            <summary>
+            Indicates whether the message has been deleted by the sender.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.Message.IsDeletedByReceiver">
+            <summary>
+            Indicates whether the message has been deleted by the receiver.
+            </summary>
+        </member>
+        <member name="T:InternalMessagingSystem.Models.CreateMessageDTO">
+            <summary>
+            Data transfer object for creating a message.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.CreateMessageDTO.ReceiverId">
+            <summary>
+            The ID of the receiver.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.CreateMessageDTO.Content">
+            <summary>
+            The content of the message.
+            </summary>
+        </member>
+        <member name="T:InternalMessagingSystem.Models.User">
+            <summary>
+            Represents a user in the internal messaging system.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.User.Id">
+            <summary>
+            The unique identifier for the user.
+            </summary>
+        </member>
+        <member name="P:InternalMessagingSystem.Models.User.Name">
+            <summary>
+            The name of the user.
+            </summary>
+        </member>
+        <member name="T:InternalMessagingSystem.Services.IMessageService">
+            <summary>
+            Interface for the message service.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IMessageService.SendMessageAsync(System.Guid,InternalMessagingSystem.Models.CreateMessageDTO)">
+            <summary>
+            Sends a message asynchronously.
+            </summary>
+            <param name="userId">The ID of the user sending the message.</param>
+            <param name="messageDTO">The message data transfer object.</param>
+            <returns>The sent message.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IMessageService.GetUserMessagesAsync(System.Guid)">
+            <summary>
+            Retrieves all messages for a specific user asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <returns>An enumerable collection of user messages.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IMessageService.GetUserMessageAsync(System.Guid,System.Guid)">
+            <summary>
+            Retrieves a specific user message asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <param name="messageId">The ID of the message.</param>
+            <returns>The user message.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IMessageService.DeleteUserMessagesAsync(System.Guid)">
+            <summary>
+            Deletes all messages for a specific user asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IMessageService.DeleteUserMessageAsync(System.Guid,System.Guid)">
+            <summary>
+            Deletes a specific user message asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <param name="messageId">The ID of the message.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:InternalMessagingSystem.Services.IUserService">
+            <summary>
+            Interface for the user service.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IUserService.CreateUserAsync(System.String)">
+            <summary>
+            Creates a new user.
+            </summary>
+            <param name="name">The name of the user.</param>
+            <returns>The created user.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IUserService.DeleteUserAsync(System.Guid)">
+            <summary>
+            Deletes a user by ID.
+            </summary>
+            <param name="userId">The ID of the user to delete.</param>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IUserService.GetUserAsync(System.Guid)">
+            <summary>
+            Gets a user by ID.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <returns>The user with the specified ID.</returns>
+            <exception cref="T:InternalMessagingSystem.Exceptions.UserNotFoundException">Thrown when the user with the specified ID is not found.</exception>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.IUserService.GetUsersAsync">
+            <summary>
+            Gets all users.
+            </summary>
+            <returns>A list of all users.</returns>
+        </member>
+        <member name="T:InternalMessagingSystem.Services.MessageService">
+            <summary>
+            Implementation of the message service using a concurrent dictionary for storage.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.MessageService.#ctor(InternalMessagingSystem.Services.IUserService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Services.MessageService"/> class.
+            </summary>
+            <param name="userService">The user service used for user-related operations.</param>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.MessageService.SendMessageAsync(System.Guid,InternalMessagingSystem.Models.CreateMessageDTO)">
+            <summary>
+            Sends a message asynchronously.
+            </summary>
+            <param name="userId">The ID of the user sending the message.</param>
+            <param name="messageDTO">The message data transfer object.</param>
+            <returns>The sent message.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.MessageService.GetUserMessageAsync(System.Guid,System.Guid)">
+            <summary>
+            Retrieves a specific user message asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <param name="messageId">The ID of the message.</param>
+            <returns>The user message.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.MessageService.GetUserMessagesAsync(System.Guid)">
+            <summary>
+            Retrieves all messages for a specific user asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <returns>An enumerable collection of user messages.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.MessageService.DeleteUserMessageAsync(System.Guid,System.Guid)">
+            <summary>
+            Deletes a specific user message asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <param name="messageId">The ID of the message.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.MessageService.DeleteUserMessagesAsync(System.Guid)">
+            <summary>
+            Deletes all messages for a specific user asynchronously.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:InternalMessagingSystem.Services.UserService">
+            <summary>
+            Implementation of the user service using a concurrent dictionary for storage.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.UserService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:InternalMessagingSystem.Services.UserService"/> class.
+            </summary>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.UserService.CreateUserAsync(System.String)">
+            <summary>
+            Creates a new user asynchronously.
+            </summary>
+            <param name="name">The name of the user.</param>
+            <returns>The created user.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.UserService.DeleteUserAsync(System.Guid)">
+            <summary>
+            Deletes a user asynchronously.
+            </summary>
+            <param name="userId">The ID of the user to delete.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.UserService.GetUserAsync(System.Guid)">
+            <summary>
+            Retrieves a user asynchronously.
+            </summary>
+            <param name="userId">The ID of the user to retrieve.</param>
+            <returns>The retrieved user.</returns>
+        </member>
+        <member name="M:InternalMessagingSystem.Services.UserService.GetUsersAsync">
+            <summary>
+            Retrieves all users asynchronously.
+            </summary>
+            <returns>A list of all users.</returns>
+        </member>
+    </members>
+</doc>

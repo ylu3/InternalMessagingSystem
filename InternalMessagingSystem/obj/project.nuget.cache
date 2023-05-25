@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "7ggDx3ZYuwwriTi5v24MEoMPY31kMJ18iAw/xKHBhnZIYiCRkjF8UimnEZ3MY4hsibtNUn+V/tOCgWHbF1L8lg==",
+  "success": true,
+  "projectFilePath": "/Users/luy/OneDrive/Documents/CDI/TestKeakr/InternalMessagingSystem/InternalMessagingSystem.csproj",
+  "expectedPackageFiles": [
+    "/Users/luy/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/luy/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/luy/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/luy/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/luy/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/luy/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

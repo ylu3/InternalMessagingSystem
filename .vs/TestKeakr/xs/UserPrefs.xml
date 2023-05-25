@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{A0B3F985-0078-4AFC-8966-16D827E34DFD}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.InternalMessagingSystem PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="InternalMessagingSystem/Program.cs">
+    <Files>
+      <File FileName="InternalMessagingSystem/Program.cs" Line="24" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TestKeakr" expanded="True">
+            <Node name="InternalMessagingSystem" expanded="True" selected="True">
+              <Node name="Configuration" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Filters" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="InternalMessagingSystem.Tests" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="TestKeakr" expanded="True" selected="True">
+            <Node name="InternalMessagingSystem.Tests" expanded="True">
+              <Node name="InternalMessagingSystem.Tests.Controllers" expanded="True">
+                <Node name="UsersControllerTests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
